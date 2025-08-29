@@ -2,13 +2,13 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh-Hans',
-  base: '/demo/',
+  base: '/',
   title: "科学指南",
   description: "",
   head: [
-    ['link', { rel: 'icon', href: '/demo/favicon.ico' }],
-    ['link', { rel: 'apple-touch-icon', href: '/demo/apple-touch-icon.png' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/demo/logo.svg' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]
   ],
   cleanUrls: true,
   ignoreDeadLinks: true,
