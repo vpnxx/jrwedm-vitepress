@@ -2,13 +2,13 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh-Hans',
-  base: '/',
+  base: '/demo/',
   title: "科学指南",
   description: "",
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]
+    ['link', { rel: 'icon', href: '/demo/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', href: '/demo/apple-touch-icon.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/demo/logo.svg' }]
   ],
   cleanUrls: true,
   ignoreDeadLinks: true,
@@ -16,8 +16,9 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo-mini.png',
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '首页', link: '/' },
+      { text: '配置教程', link: '/guide' },
+      { text: '软件下载', link: '/download' }
     ],
 
     sidebar: [
