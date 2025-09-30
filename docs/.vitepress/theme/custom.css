@@ -75,3 +75,8 @@
   padding-left: 20px; /* 控制列表的整体左侧缩进 */
   margin: 5px 0;      /* 调整列表的上下间距，使其更美观 */
 }
+
+/* --- 彻底移除页脚上方的默认主题分割线 --- */
+.VPContent {
+  border-bottom: none !important;
+}
