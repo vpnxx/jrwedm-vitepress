@@ -1,4 +1,3 @@
-// docs/.vitepress/configs/zh.mts
 import type { DefaultTheme } from 'vitepress'
 import { nav } from './nav/zh.mts'
 import { sidebar } from './sidebar/zh.mts'
