@@ -2,10 +2,10 @@
 layout: page
 ---
 
-<!-- <script setup>
+<script setup>
 import { slides, products } from './.vitepress/data/zh.ts'
-</script> -->
+</script>
 
-<!-- <MainCarousel :slides="slides" /> -->
+<MainCarousel :slides="slides" />
 
-<!-- <ProductCarousel :products="products" /> -->
+<ProductCarousel :products="products" />
