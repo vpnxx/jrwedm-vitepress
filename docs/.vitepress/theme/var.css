@@ -1,0 +1,64 @@
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #bd34fe 30%,
+    #41d1ff
+  );
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #bd34fe 50%,
+    #47caff 50%
+  );
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+:root {
+  /* 定义渐变色变量 */
+  --vp-background-gradient: linear-gradient(180deg, #fbfcfe 0%, #f7f8fc 100%);
+}
+
+/* 将渐变背景应用到整个页面 */
+.VitePress {
+  background: var(--vp-background-gradient);
+}
+
+/* 确保深色模式下背景恢复正常 */
+.dark .VitePress {
+  background: #1b1b1f; /* VitePress 默认深色背景 */
+}
+
+/* 确保内容区域的背景是透明的，以便透出渐变色 */
+.VPContent {
+  background-color: transparent !important;
+}
+.VPPage {
+  background-color: transparent !important;
+}
+
+/* 优化卡片和代码块在渐变背景下的显示 */
+.vp-doc div[class*='language-'],
+.vp-doc .custom-block {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* 链接下划线 */
+.vp-doc a {
+    text-decoration: none;
+}
+
+/* 文档标题样式 */
+.VPDoc h1 {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  /* background: -webkit-linear-gradient(10deg, #bd34fe 5%, #e43498 15%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #5c79eb;
+}
+
+.VPDoc h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0rem;
+}

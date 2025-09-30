@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as n}from"./chunks/framework.DlPgics1.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"en/notices/index.md","filePath":"en/notices/index.md"}'),a={name:"en/notices/index.md"};function o(s,c,r,i,d,p){return n(),t("div")}const f=e(a,[["render",o]]);export{m as __pageData,f as default};

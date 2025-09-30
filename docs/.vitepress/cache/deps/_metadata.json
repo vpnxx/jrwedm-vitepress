@@ -1,0 +1,76 @@
+{
+  "hash": "0dc12b95",
+  "configHash": "b4f3e8c0",
+  "lockfileHash": "3af76057",
+  "browserHash": "de341097",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "d66244e3",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "ada602ad",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../../node_modules/@vueuse/core/index.mjs",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "a4559878",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/integrations/useFocusTrap": {
+      "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
+      "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
+      "fileHash": "6a5b38f1",
+      "needsInterop": false
+    },
+    "vitepress > mark.js/src/vanilla.js": {
+      "src": "../../../../node_modules/mark.js/src/vanilla.js",
+      "file": "vitepress___mark__js_src_vanilla__js.js",
+      "fileHash": "21d323b3",
+      "needsInterop": false
+    },
+    "vitepress > minisearch": {
+      "src": "../../../../node_modules/minisearch/dist/es/index.js",
+      "file": "vitepress___minisearch.js",
+      "fileHash": "d6be517d",
+      "needsInterop": false
+    },
+    "vue-amazing-ui": {
+      "src": "../../../../node_modules/vue-amazing-ui/es/index.js",
+      "file": "vue-amazing-ui.js",
+      "fileHash": "77b24933",
+      "needsInterop": false
+    },
+    "swiper/vue": {
+      "src": "../../../../node_modules/swiper/swiper-vue.mjs",
+      "file": "swiper_vue.js",
+      "fileHash": "a583f176",
+      "needsInterop": false
+    },
+    "swiper/modules": {
+      "src": "../../../../node_modules/swiper/modules/index.mjs",
+      "file": "swiper_modules.js",
+      "fileHash": "8f622602",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-JGEUIY2G": {
+      "file": "chunk-JGEUIY2G.js"
+    },
+    "chunk-OV36UNJN": {
+      "file": "chunk-OV36UNJN.js"
+    },
+    "chunk-JAPIL3UL": {
+      "file": "chunk-JAPIL3UL.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
+}

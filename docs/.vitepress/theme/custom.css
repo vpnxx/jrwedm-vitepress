@@ -1,14 +1,77 @@
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe 30%,
-    #41d1ff
-  );
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #bd34fe 50%,
-    #47caff 50%
-  );
-  --vp-home-hero-image-filter: blur(44px);
+/* docs/.vitepress/theme/custom.css */
+
+/* 1. 产品图片居中容器 */
+.product-image-container {
+  /* 使用 Flexbox 布局来确保图片水平居中，这是最可靠的方法 */
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 3rem;
+}
+.product-image-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--vp-shadow-2);
+}
+
+/* 产品规格表格的包裹容器 */
+.product-table {
+  overflow-x: auto; /* 在小屏幕上如果表格太宽，开启横向滚动条 */
+}
+
+/* --- 表格主体样式 --- */
+.product-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--vp-c-divider);
+  margin: 2rem 0; /* 调整表格的上下间距 */
+}
+
+/* 表格单元格和表头样式 */
+.product-table th,
+.product-table td {
+  border: 1px solid var(--vp-c-divider);
+  padding: 10px 10px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* 表格第一列样式 */
+.product-table th:first-child,
+.product-table td:first-child {
+  width: 100px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  vertical-align: top;
+  /* 为第一列也添加一个不易察觉的浅色背景，使其更突出 */
+  background-color: var(--vp-c-bg-mute);
+}
+
+/* 2. 表格各行相间背景色 */
+/* 我们专门针对 tbody 中的 tr (表格内容行) 进行操作，以避免影响表头 */
+.product-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+.product-table tbody tr:nth-child(odd) {
+  /* 奇数行应用浅蓝色 */
+  background-color: #f0f7ff;
+}
+.product-table tbody tr:nth-child(even) {
+  /* 偶数行使用主题的柔和背景色（通常是白色） */
+  background-color: var(--vp-c-bg-soft);
+}
+
+/* --- 深色主题下的适配 (修正) --- */
+.dark .product-table tbody tr:nth-child(odd) {
+  /* 深色模式下的浅蓝色 */
+  background-color: rgba(66, 153, 225, 0.1);
+}
+.dark .product-table tbody tr:nth-child(even) {
+    background-color: var(--vp-c-bg-mute);
+}
+
+/* --- 优化产品表格内部的列表样式 --- */
+.product-table td ol,
+.product-table td ul {
+  padding-left: 20px; /* 控制列表的整体左侧缩进 */
+  margin: 5px 0;      /* 调整列表的上下间距，使其更美观 */
 }

@@ -1,62 +1,71 @@
 import { defineConfig } from 'vitepress'
+import { zhConfig } from './configs/zh.mts'
+import { enConfig } from './configs/en.mts'
 
 export default defineConfig({
-  lang: 'zh-Hans',
-  base: '/',
-  title: "科学指南",
-  description: "",
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]
-  ],
+  title: "佳润电火花线切割液",
+  description: "佳润官方网站",
+  
+  // 隐藏 .html 后缀
   cleanUrls: true,
-  ignoreDeadLinks: true,
-
-  themeConfig: {
-    logo: '/logo-mini.png',
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '配置教程', link: '/guide' },
-      { text: '软件下载', link: '/download' }
-    ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
-
-    socialLinks: [
-      { icon: 'qq', link: 'https://qm.qq.com/q/EB9FBNhOjS' },
-      { icon: 'github', link: 'https://github.com/henryard/henryard' }
-    ],
-
-    returnToTopLabel: '回到顶部',
-    sidebarMenuLabel: '菜单',
-    darkModeSwitchLabel: '主题',
-    lightModeSwitchTitle: '浅色外观',
-    darkModeSwitchTitle: '深色外观',
-    skipToContentLabel: '跳转到内容',
-
-    outline: {
-      label: '页面导航'
+  
+  // 多语言配置
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'zh-CN',
+      ...zhConfig
     },
-
-    lastUpdated: {
-      text: '最后更新于',
-      formatOptions: {
-        dateStyle: 'long'
-      }
-    },
-
-    docFooter: {
-      prev: '上一页',
-      next: '下一页'
+    en: {
+      label: 'English',
+      lang: 'en-US',
+      ...enConfig
     }
-  }
+  },
+  
+  // 主题配置
+  themeConfig: {
+    logo: '/logo.png',
+    
+    // 社交链接（可选）
+    socialLinks: [
+      // { icon: 'github', link: 'https://github.com/yourcompany' }
+    ],
+    
+    // 搜索配置（可选）
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: '搜索',
+                buttonAriaLabel: '搜索'
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  // 头部配置
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', size: '96x96' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favico.svg' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#193763' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+    ['meta', { id: 'theme-color-meta', name: 'theme-color', content: '#ffffff' }]
+  ]
 })
