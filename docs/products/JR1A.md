@@ -5,9 +5,9 @@ description: JR1A 复合型工作液的详细介绍，包括配比、适用范�
 
 # JR1A 复合型工作液
 
-<div class="product-image-container">
+<!-- <div class="product-image-container">
   <img src="/images/pro/JR1A.jpg" alt="JR1A 复合型工作液 产品图">
-</div>
+</div> -->
 
 ## 产品规格
 
