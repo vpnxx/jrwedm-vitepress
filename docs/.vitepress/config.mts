@@ -5,12 +5,10 @@ import { zhConfig } from './configs/zh.mts'
 import { enConfig } from './configs/en.mts'
 
 export default defineConfig({
-  // 这是全局的基础配置
   title: "佳润",
   description: "佳润官方网站",
   cleanUrls: true,
   
-  // 头部配置等保持不变
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', size: '96x96' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favico.svg' }],
@@ -21,19 +19,18 @@ export default defineConfig({
     ['meta', { id: 'theme-color-meta', name: 'theme-color', content: '#ffffff' }]
   ],
 
-  // 多语言配置
   locales: {
     root: {
       label: '简体中文',
       lang: 'zh-CN',
-      link: '/', // 关键：告诉VitePress根URL是什么
-      ...zhConfig // 现在这里展开的是一个纯粹的对象
+      link: '/',
+      ...zhConfig
     },
     en: {
       label: 'English',
       lang: 'en-US',
-      link: '/en/', // 关键：告诉VitePress英文版的URL前缀
-      ...enConfig // 这里也是
+      link: '/en/',
+      ...enConfig
     }
   },
   
@@ -43,6 +40,21 @@ export default defineConfig({
     socialLinks: [
       // { icon: 'github', link: 'https://github.com/yourcompany' }
     ],
+
+    // --- 新增：将 footer 配置移到这里 ---
+    footer: {
+      message: `
+        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+          <span style="color: #aaa;">© 佳润线切割液生产厂</span>
+          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33068102000388" style="display: inline-flex; align-items: center; gap: 5px; text-decoration: none; color: #aaa;">
+            <img src="/images/beian.png" style="float:left;"/>
+            <span>浙公网安备 33068102000388号</span>
+          </a>
+        </div>
+      `
+    },
+    // --- 新增结束 ---
+    
     search: {
       provider: 'local',
       options: {

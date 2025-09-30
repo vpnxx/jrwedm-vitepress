@@ -17,17 +17,6 @@ export const zhConfig = {
     sidebarMenuLabel: '菜单',
     darkModeSwitchLabel: '主题',
     lightModeSwitchTitle: '切换到浅色模式',
-    darkModeSwitchTitle: '切换到深色模式',
-    footer: {
-      message: `
-        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
-          <span style="color: #aaa;">© 佳润线切割液生产厂</span>
-          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33068102000388" style="display: inline-flex; align-items: center; gap: 5px; text-decoration: none; color: #aaa;">
-            <img src="/images/beian.png" style="float:left;"/>
-            <span>浙公网安备 33068102000388号</span>
-          </a>
-        </div>
-      `
-    }
+    darkModeSwitchTitle: '切换到深色模式'
   }
 }
