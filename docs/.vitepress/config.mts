@@ -49,8 +49,13 @@ export default defineConfig({
   cleanUrls: true,
   
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    // ... 您其他的 head 配置
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', size: '96x96' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favico.svg' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#193763' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+    ['meta', { id: 'theme-color-meta', name: 'theme-color', content: '#ffffff' }]
   ],
 
   locales: {
