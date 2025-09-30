@@ -1,37 +1,23 @@
-import { defineConfig } from 'vitepress'
+// docs/.vitepress/configs/en.mts
+import type { DefaultTheme } from 'vitepress'
 import { nav } from './nav/en.mts'
 import { sidebar } from './sidebar/en.mts'
 
-export const enConfig = defineConfig({
+// 直接导出纯粹的配置对象，不要使用 defineConfig
+export const enConfig = {
   title: 'Jiarun',
   description: 'Jiarun Official Website',
   
   themeConfig: {
-    nav: nav, // 导入 nav
-    sidebar: sidebar, // 导入 sidebar
-    // Page configuration
-    docFooter: {
-      prev: 'Previous',
-      next: 'Next'
-    },
-    
-    outline: {
-      label: 'On this page',
-      level: [2, 3]
-    },
-    
-    lastUpdated: {
-      text: 'Last updated',
-      formatOptions: {
-        dateStyle: 'short',
-        timeStyle: 'medium'
-      }
-    },
-    
+    nav: nav,
+    sidebar: sidebar,
+    docFooter: { prev: 'Previous', next: 'Next' },
+    outline: { label: 'On this page', level: [2, 3] },
+    lastUpdated: { text: 'Last updated', formatOptions: { dateStyle: 'short', timeStyle: 'medium' }},
     returnToTopLabel: 'Return to top',
     sidebarMenuLabel: 'Menu',
     darkModeSwitchLabel: 'Theme',
     lightModeSwitchTitle: 'Switch to light mode',
     darkModeSwitchTitle: 'Switch to dark mode'
   }
-})
+}
