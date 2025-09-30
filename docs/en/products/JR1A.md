@@ -6,7 +6,7 @@ description: Detailed introduction of JR1A Compound Working Fluid, including rat
 # JR1A Compound Working Fluid
 
 <div class="product-image-container">
-  <img src="/products/JR1A.jpg" alt="JR1A Compound Working Fluid Product Image">
+  <img src="/images/pro/JR1A.jpg" alt="JR1A Compound Working Fluid Product Image">
 </div>
 
 ## Product Specifications
