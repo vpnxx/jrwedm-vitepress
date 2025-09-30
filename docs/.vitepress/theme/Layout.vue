@@ -3,13 +3,14 @@ import DefaultTheme from 'vitepress/theme'
 import { useData } from 'vitepress'
 
 const { Layout } = DefaultTheme
-const { theme } = useData()
+// 1. 从 useData() 中获取 frontmatter 信息
+const { theme, frontmatter } = useData()
 </script>
 
 <template>
   <Layout>
-    <template #layout-bottom>
-      <footer class="custom-footer">
+    <template v-if="frontmatter.homepage" #layout-bottom>
+      <footer class="VPFooter custom-footer">
         <div class="container">
           <div class="message" v-html="theme.footer.message"></div>
         </div>

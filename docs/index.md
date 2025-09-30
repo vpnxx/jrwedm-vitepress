@@ -1,4 +1,5 @@
 ---
+homepage: true
 layout: page
 ---
 
