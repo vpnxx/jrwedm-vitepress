@@ -9,7 +9,7 @@ const { theme } = useData()
 <template>
   <Layout>
     <template #layout-bottom>
-      <footer class="VPFooter custom-footer">
+      <footer class="custom-footer">
         <div class="container">
           <div class="message" v-html="theme.footer.message"></div>
         </div>
@@ -22,7 +22,7 @@ const { theme } = useData()
 .custom-footer {
   position: relative;
   z-index: var(--vp-z-index-footer);
-  /* border-top: 1px solid var(--vp-c-divider); */ /* <-- 已移除横线 */
+  border-top: none; /* 确保没有任何上边框 */
   padding: 32px 24px;
   background-color: var(--vp-c-bg-soft);
 }
