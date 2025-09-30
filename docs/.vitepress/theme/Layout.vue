@@ -19,11 +19,10 @@ const { theme } = useData()
 </template>
 
 <style scoped>
-/* 为我们的自定义页脚添加一些样式，确保它看起来和默认页脚一样 */
 .custom-footer {
   position: relative;
   z-index: var(--vp-z-index-footer);
-  border-top: 1px solid var(--vp-c-divider);
+  /* border-top: 1px solid var(--vp-c-divider); */ /* <-- 已移除横线 */
   padding: 32px 24px;
   background-color: var(--vp-c-bg-soft);
 }
