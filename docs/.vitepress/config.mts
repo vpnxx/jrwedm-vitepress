@@ -8,7 +8,7 @@ export default defineConfig({
   
   // 隐藏 .html 后缀
   cleanUrls: true,
-  ignoreDeadLinks: true
+  ignoreDeadLinks: true,
   
   // 多语言配置
   locales: {

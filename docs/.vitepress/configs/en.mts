@@ -1,15 +1,34 @@
-import { defineConfig } from 'vitepress'
-import { nav } from './nav/en.mts'
-import { sidebar } from './sidebar/en.mts'
+// docs/.vitepress/configs/en.mts
 
-export const enConfig = defineConfig({
+// 这里也只导出一个纯粹的配置对象
+export const enConfig = {
   title: 'Jiarun',
   description: 'Jiarun Official Website',
   
   themeConfig: {
-    nav: nav, // 导入 nav
-    sidebar: sidebar, // 导入 sidebar
-    // Page configuration
+    nav: [
+      { text: 'Home', link: '/en/' },
+      { text: 'Products', link: '/en/products/' },
+      { text: 'Videos', link: '/en/videos/' },
+      { text: '🔥 Notices', link: '/en/notices/' },
+      { text: 'About', link: '/en/about/' },
+      { text: 'Contact', link: '/en/contact/' }
+    ],
+  
+    sidebar: {
+      '/en/products/': [
+        {
+          text: 'Products',
+          items: [
+            { text: 'Overview', link: '/en/products/' },
+            { text: 'Product Series A', link: '/en/products/product-1' },
+            { text: 'Product Series B', link: '/en/products/product-2' }
+          ]
+        }
+      ],
+      // ... (您其他的英文 sidebar 配置)
+    },
+    
     docFooter: {
       prev: 'Previous',
       next: 'Next'
@@ -34,4 +53,4 @@ export const enConfig = defineConfig({
     lightModeSwitchTitle: 'Switch to light mode',
     darkModeSwitchTitle: 'Switch to dark mode'
   }
-})
+}
