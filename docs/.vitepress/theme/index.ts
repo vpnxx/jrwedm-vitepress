@@ -13,7 +13,7 @@ import './code-group.css'
 import './code-title.css'
 // import './hidden.css'
 import 'vue-amazing-ui/css'
-// import Layout from './Layout.vue'
+import Layout from './Layout.vue'
 import AmazingUI from 'vue-amazing-ui'
 import ContactInfo from './components/ContactInfo.vue'
 
