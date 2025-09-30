@@ -8,6 +8,10 @@
         }
     } */
 
+    .outline-title {
+        border-bottom: none !important;
+    }
+
     /* 页脚横条隐藏 */
     .VPFooter {
         border-top: none;
@@ -37,6 +41,6 @@
 
 
 /* 导航栏下划线隐藏 */
-/* .divider {
+.divider {
     display: none;
-} */
+}
