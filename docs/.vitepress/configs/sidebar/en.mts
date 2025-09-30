@@ -7,8 +7,8 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: 'Products',
       items: [
         { text: 'Overview', link: '/en/products/' },
-        { text: 'Product Series A', link: '/en/products/product-1' },
-        { text: 'Product Series B', link: '/en/products/product-2' }
+        { text: 'Product Series A', link: '/en/products/' },
+        { text: 'Product Series B', link: '/en/products/' }
       ]
     }
   ],

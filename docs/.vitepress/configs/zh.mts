@@ -1,34 +1,15 @@
-// docs/.vitepress/configs/zh.mts
+import { defineConfig } from 'vitepress'
+import { nav } from './nav/zh.mts'
+import { sidebar } from './sidebar/zh.mts'
 
-// 从这里导出的应该是一个纯粹的配置对象
-export const zhConfig = {
+export const zhConfig = defineConfig({
   title: '佳润电火花线切割液',
   description: '佳润官方网站',
   
   themeConfig: {
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '产品展示', link: '/products/' },
-      { text: '影片介绍', link: '/videos/' },
-      { text: '🔥 重要通告', link: '/notices/' },
-      { text: '关于佳润', link: '/about/' },
-      { text: '联系我们', link: '/contact/' }
-    ],
-    
-    sidebar: {
-      '/products/': [
-        {
-          text: '产品展示',
-          items: [
-            { text: '产品概览', link: '/products/' },
-            { text: '产品系列A', link: '/products/product-1' },
-            { text: '产品系列B', link: '/products/product-2' }
-          ]
-        }
-      ],
-      // ... (您其他的 sidebar 配置)
-    },
-    
+    nav: nav, // 导入 nav
+    sidebar: sidebar, // 导入 sidebar
+    // 页面配置
     docFooter: {
       prev: '上一页',
       next: '下一页'
@@ -58,11 +39,12 @@ export const zhConfig = {
         <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
           <span style="color: #aaa;">© 佳润线切割液生产厂</span>
           <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33068102000388" style="display: inline-flex; align-items: center; gap: 5px; text-decoration: none; color: #aaa;">
-            <img src="images/beian.png" style="float:left;"/>
+		 			  <img src="images/beian.png" style="float:left;"/>
             <span>浙公网安备 33068102000388号</span>
           </a>
         </div>
-      `
+      `,
+      // copyright: '版权所有 © 佳润线切割液生产厂'
     }
   }
-}
+})
