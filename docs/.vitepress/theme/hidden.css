@@ -1,12 +1,12 @@
 /* .vitepress\theme\style\hidden.css */
 :root {
 
-    /* 文档页Logo出文字下横条 */
-    @media (min-width: 960px) {
+    /* 文档页Logo处文字下横条 */
+    /* @media (min-width: 960px) {
         .VPNavBarTitle.has-sidebar .title {
             border-bottom-color: transparent;
         }
-    }
+    } */
 
     /* 页脚横条隐藏 */
     .VPFooter {
@@ -37,6 +37,6 @@
 
 
 /* 导航栏下划线隐藏 */
-.divider {
+/* .divider {
     display: none;
-}
+} */
